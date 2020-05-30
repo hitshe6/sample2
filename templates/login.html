@@ -1,0 +1,23 @@
+{% extends 'user.html' %}
+
+{% block title %} Post {% endblock title %} 
+
+{% block body %} 
+<body class="text-center">
+    <form class="form-signin" method="post"action="/login">
+    {% csrf_token %}
+  <img class="mb-4" src="" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Please Login in</h1>
+  <label   class="sr-only">User Nmae</label>
+ 
+  <input type="text" id="user_name" name="name" class="form-control" placeholder="User name" required="" autofocus="">
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword"  name = "password" class="form-control" placeholder="Password" required="">
+  <br>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Login in</button>
+  <p class="mt-5 mb-3 text-muted">All The Best</p>
+</form>
+
+
+</body>
+{% endblock body %} 
